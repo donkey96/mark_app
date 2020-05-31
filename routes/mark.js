@@ -64,7 +64,7 @@ function makepage(req, res, model, flg) {
   if (flg) {
     var d1 = new Date(model.attributes.created_at);
     var dstr1 = d1.getFullYear() + '-' + (d1.getMonth() + 1) + '-' + d1.getDate();
-    var d2 = new Date(model.attributes.created_at);
+    var d2 = new Date(model.attributes.updated_at);
     var dstr2 = d2.getFullYear() + '-' + (d2.getMonth() + 1) + '-' + d2.getDate();
     footer = '(created: ' + dstr1 + ', updated: ' + dstr2 + ')';
   } else {

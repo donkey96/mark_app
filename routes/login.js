@@ -33,7 +33,7 @@ router.post('/', function (req, res, next) {
   var request = req;
   var response = res;
   req.check('name', 'NAME は必ず入力して下さい。').notEmpty();
-  req.check('password', 'PASSWORD は必ず入力して下さい。')notEmpty();
+  req.check('password', 'PASSWORD は必ず入力して下さい。').notEmpty();
   req.getValidationResult().then(function (result) {
     if (!result.isEmpty()) {
       var content = '<ul class="error">';
